@@ -1,0 +1,142 @@
+.container-favorite {
+    background: var(--color-light-blue-green);
+    padding: 6rem 0;
+}
+
+.container-favorite__title {
+    display: flex;
+    gap: 0.6rem;
+    padding: 0 2rem;
+}
+
+.container-favorite__title h4 {
+    color: var(--color-dark-blue);
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+/*heart animation*/
+.heart-animation {
+    background-image: url('../../assets/img/web_heart_animation.png');
+    background-repeat: no-repeat;
+    background-size: 2900%;
+    background-position: left;
+    height: 4.5rem;
+    width: 4.5rem;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.animate {
+    animation: heart-burst .8s steps(28) forwards;
+}
+
+@keyframes heart-burst {
+    0% {
+        background-position: left
+    }
+
+    100% {
+        background-position: right
+    }
+}
+
+
+/*slider css*/
+.slider__card {
+    width: 20rem;
+    height: 20rem;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin: 7rem 2rem 0 2rem;
+    cursor: pointer;
+    white-space: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--color-dark-blue);
+}
+
+#menu-slider {
+    position: relative;
+    width: 90%;
+    height: 26rem;
+    top: 1rem;
+    margin: 0 7rem 0 5rem;
+}
+
+#slider-container-cards {
+    width: 80%;
+    overflow: hidden;
+    display: block;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    left: 10%;
+    white-space: nowrap;
+    bottom: 60px;
+
+}
+
+.content-slider__card {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+#nav-slider__prev {
+    display: inline-block;
+    position: absolute;
+    left: 2%;
+    cursor: pointer;
+    font-size: 60px;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+}
+
+#nav-slider__next {
+    display: inline-block;
+    position: absolute;
+    right: 2%;
+    cursor: pointer;
+    font-size: 60px;
+    z-index: 1;
+    width: 30px;
+    height: 50px;
+}
+
+#nav-slider__prev,
+#next {
+    margin-top: 11rem;
+    color: #aaaaaa;
+}
+
+@media (max-width: 1026px) {
+    #menu-slider {
+        width: 95%;
+        height: 22rem;
+        top: 0.5rem;
+        margin: 0 2% 0 2%;
+    }
+
+    .slider__card {
+        width: 16rem;
+        height: 17rem;
+        border: 1px solid var(--color-white);
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        margin: 6rem 1rem 0 1rem;
+        padding: 1rem;
+        white-space: normal;
+    }
+
+    #nav-slider__prev,
+    #nav-slider__next {
+        margin-top: 9.5rem;
+    }
+}
