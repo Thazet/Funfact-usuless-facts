@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hechos Curiosos</title>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hechos Curiosos</h1>
+  <p id="fact"></p>
+
+  <button onclick="getRandomFact()">Obtener Hecho Curioso</button>
+
+  <script>
+    // Función para obtener un hecho curioso de la API
+    async function getRandomFact() {
+      try {
+        const response = await fetch('https://uselessfacts.jsph.pl/random.json?language=es');
+        const data = await response.json();
+        document.getElementById('fact').innerText = data.text;
+      } catch (error) {
+        console.error('Hubo un error al obtener el hecho curioso:', error);
+      }
+    }
+  </script>
+</body>
+</html>
