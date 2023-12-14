@@ -1,7 +1,9 @@
 {
   "devDependencies": {
-    "vitest": "^1.0.4",
-    "type": "module"
+    "@testing-library/dom": "^9.3.3",
+    "@testing-library/jest-dom": "^6.1.4",
+    "jsdom": "^23.0.1",
+    "vitest": "^1.0.4"
   },
   "scripts": {
     "test": "vitest"
@@ -10,6 +12,7 @@
   "description": "Este proyecto consiste en una Single Page Application (SPA) que utiliza JavaScript para llamar a una API externa y mostrar hechos curiosos de manera aleatoria.",
   "version": "1.0.0",
   "main": "vite.config.js",
+  "type": "module",
   "directories": {
     "test": "tests"
   },
