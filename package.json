@@ -11,7 +11,7 @@
   "name": "funfact-usuless-facts",
   "description": "Este proyecto consiste en una Single Page Application (SPA) que utiliza JavaScript para llamar a una API externa y mostrar hechos curiosos de manera aleatoria.",
   "version": "1.0.0",
-  "main": "vite.config.js",
+  "main": "app.js",
   "type": "module",
   "directories": {
     "test": "tests"
