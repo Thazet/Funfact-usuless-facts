@@ -1,5 +1,5 @@
 document.getElementById('nav-slider__prev').addEventListener('click', function () {
-    let cardsContainer = document.getElementById('slider-cards');
+    let cardsContainer = document.getElementById('slider-container-cards');
     let scrollAmount = -500;
 
     cardsContainer.scrollTo({
@@ -9,7 +9,7 @@ document.getElementById('nav-slider__prev').addEventListener('click', function (
 });
 
 document.getElementById('nav-slider__next').addEventListener('click', function () {
-    let cardsContainer = document.getElementById('slider-cards');
+    let cardsContainer = document.getElementById('slider-container-cards');
     let scrollAmount = 500;
 
     cardsContainer.scrollTo({
