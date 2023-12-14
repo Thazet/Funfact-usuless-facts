@@ -1,0 +1,20 @@
+.navbar-container {
+    background-color: var(--white);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+.navbar-container__container-left {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    margin-left: 1rem;
+}
+.navbar-container__container-left .logo {
+    width: 120px;
+    padding: 8rem;
+}
+
