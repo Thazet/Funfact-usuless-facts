@@ -1,3 +1,7 @@
+header {
+    width: 90%;
+}
+
 .navbar-container {
     background-color: var(--white);
     width: 100%;

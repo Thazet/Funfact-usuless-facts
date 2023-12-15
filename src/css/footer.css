@@ -1,15 +1,18 @@
-.footer{
-    background-color: var(--color-dark-blue);
+.container-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1.5rem 2.6rem 1.5rem 2.6rem;
-    position: absolute;
-    bottom:0;
+    background-color: var(--color-dark-blue);
+    width: 100%;
 }
 
-body{
-    min-height: 100vh;
+
+.footer{
+    position: relative;
 }
 
 .footer__icons-section{
@@ -30,7 +33,7 @@ body{
 }
 
 @media (min-width: 1000px) {
-    .footer{
+    .container-footer{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
