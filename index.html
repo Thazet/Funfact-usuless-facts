@@ -8,9 +8,19 @@
   <link rel="stylesheet" href="./src/css/base.css">
   <title>Useless Facts</title>
 </head>
-
 <body>
-  <div class="carousel">
+  <header>
+    <nav class="navbar-container">
+      <div class="navbar-container__left">
+        <img src="./assets/img/logoUselessfacts.svg" alt="logo">
+      </div>
+      <div class="navbar-container__right">
+        <a href="index.html" class="navbar-container__right--btn-favorites">Favorites</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+   <div class="carousel">
     <div class="carousel__images">
       <div id="img">
         <img class="carousel__img" src="./assets/img/1.png" alt="Image 1" loading="lazy">
@@ -28,6 +38,34 @@
     </div>
   </div>
 
+  </main>
+
+
+
+  <footer class="footer">
+    <div class="footer__icons-section">
+      <a class="footer__icons-section--instragam" href="www.instragam.com">
+        <img src="./assets/img/icon-instagram.svg" alt="logo instragram">
+      </a>
+      <a class="footer__icons-section--facebook" href="wwww.facebook.com">
+        <img src="./assets/img/icon-facebook.svg" alt="logo facebook">
+      </a>
+      <a class="footer__icons-section--tiktok" href="www.tiktok.com">
+        <img src="./assets/img/icon-tiktok.svg" alt="logo tiktok">
+      </a>
+      <a class="footer__icons-section--youtube" href="wwww.youtube.com">
+        <img src="./assets/img/icon-youtube.svg" alt="logo youtube">
+      </a>
+      <a class="footer__icons-section--twitter" href="www.twitter.com">
+        <img src="./assets/img/icon-twitter.svg" alt="logo twitter">
+      </a>
+    </div>
+    <div class="footer__contact-section">
+      <p class="footer__contact-section--email">email@useless.com</p>
+      <p class="footer__contact-section--phone">+34 123456789</p>      
+    </div>
+  </footer>
+ 
   <script src="/src/js/facts-section-main.js"></script>
 </body>
 
