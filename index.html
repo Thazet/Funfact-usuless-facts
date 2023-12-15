@@ -1,72 +1,33 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="logo" href="./assets/img/logoUselessfacts.svg">
   <link rel="stylesheet" href="./src/css/base.css">
-  <title>Usuless Facts</title>
-
+  <title>Useless Facts</title>
 </head>
 
 <body>
-  <header>
-    <nav class="navbar-container">
-      <div class="container-left">
-        <img src="logo" src="./assets/img/logoUselessfacts.svg" alt="logo">
+  <div class="carousel">
+    <div class="carousel__images">
+      <div id="img">
+        <img class="carousel__img" src="./assets/img/1.jpg" alt="Image 1" loading="lazy">
       </div>
-      <div class="container-right">
-        <a href="index.html" class="btn button-favourite">Favourite</a>
+
+      <div id="texto" class="carousel__text">
+        <h3 class="carousel__title">Facts</h3>
+        <p class="carousel__description"> If you like the content, give it a like and subscribe.</p>
       </div>
-    </nav>
-  </header>
-
-  <main>
-    <section id="carousel-photos">
-      <div id="carousel-container">
-        <img src="" alt="Lorem ipsum dolor sit amet 
-              consectetur">
-        <img src="" alt="Lorem ipsum dolor sit amet 
-              consectetur">
-        <img src="" alt="Lorem ipsum dolor sit amet 
-              consectetur">
-        <img src="" alt="Lorem ipsum dolor sit amet 
-              consectetur">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-      </div>
-    </section>
-
-    <section class="section-carousel">
-      <div class="text-carousel">
-        <h1>fddfddfdfdd</h1>
-        <h2>dfddfddd</h2>
-        <h3>dfdfdfdfdd</h3>
-      </div>
-    </section>
-
-
-  </main>
-
-
-
-  <footer class=" 'footer">
-    <div class="Social-media-icons">
-      <i class=""></i>
     </div>
-    <div class="email">
-      <p>havefun@fanfacts.com</p>
+
+    <!-- button to advance -->
+    <div class="carousel__advance" id="advance">
+      <button class="carousel__change-image-button">Generate Fact</button>
     </div>
-    <div class="phone">
-      <p>+34 1234 56789</p>
-    </div>
-  </footer>
-  <script src="./src/js/script.js"> type = "text/javascript"</script>
+  </div>
+
+  <script src="/src/js/facts-section-main.js"></script>
 </body>
 
 </html>
