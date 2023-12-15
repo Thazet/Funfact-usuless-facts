@@ -1,24 +1,29 @@
 let images = [
     {
-    "url": "./assets/img/1.jpg",
+    "url": "./assets/img/1.png",
     "name": "The average person falls asleep in seven minutes.",
     "description": " If you like the content, give it a like and subscribe."
     },
     {
-    "url": "./assets/img/2.jpg",
+    "url": "./assets/img/2.png",
     "name": "The average person falls asleep in seven minutes",
     "description": "If you like the content, give it a like and subscribe."
     },
     {
-    "url": "./assets/img/3.jpg",
+    "url": "./assets/img/3.png",
     "name": "Reindeer like to eat bananas.",
     "description": " If you like the content, give it a like and subscribe."
     },
     {
-    "url": "./assets/img/4.jpeg",
+    "url": "./assets/img/4.png",
     "name": "Lorem ipsum dolor sit amet consectetur",
     "description": "If you like the content, give it a like and subscribe."
     },
+    {
+        "url": "./assets/img/5.png",
+        "name": "Lorem ipsum dolor sit amet consectetur",
+        "description": "If you like the content, give it a like and subscribe."
+        },
 ];
 
 let advance = document.getElementById('advance');
