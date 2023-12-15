@@ -81,10 +81,10 @@ body {
 }
 
 .carousel__advance {
-
+    border-color: transparent;
     position: absolute;
     margin-right: -1rem;
-    border-color: none;
+    border-color: transparent;
     color: var(--color-white);
 }
 
@@ -98,7 +98,7 @@ body {
     font-size: 0.9rem;
     align-items: center;
     text-align: center;
-    border-color: none;
+    border-color: transparent;
 
 }
 
@@ -189,7 +189,7 @@ body {
     .carousel__advance {
         position: absolute;
         bottom: 13rem;
-        /*color: var(--color-white);*/
+        border-color: transparent;
         
     }
     
@@ -203,7 +203,7 @@ body {
         font-size: 1.5rem;
         align-items: center;
         text-align: center;
-    
+        border-color: transparent;
     }
     
 }
