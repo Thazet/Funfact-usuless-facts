@@ -1,0 +1,29 @@
+.navbar-container {
+    background-color: var(--white);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.navbar-container__container-left {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    margin-left: 1rem;
+}
+.navbar-container__container-left .logo {
+    width: 120px;
+    padding: 8rem;
+}
+.navbar-container__container-right.btn-favorites{
+    color: var(--darkblue);
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+
