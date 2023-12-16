@@ -1,19 +1,12 @@
 let images = [
-    {
-    "url": "./assets/img/1.png",
-    },
-    {
-    "url": "./assets/img/2.png",
-    },
-    {
-    "url": "./assets/img/3.png",
-    },
-    {
-    "url": "./assets/img/4.png",
-    },
-    {
-    "url": "./assets/img/5.png",
-    },
+    {"url": "./assets/img/1.png",},
+    {"url": "./assets/img/2.png",},
+    {"url": "./assets/img/3.png",},
+    {"url": "./assets/img/4.png",},
+    {"url": "./assets/img/5.png",},
+    {"url": "./assets/img/6.png",},
+    {"url": "./assets/img/7.png",},
+    {"url": "./assets/img/8.png",},
 ];
 
 let advance = document.getElementById('advance');
@@ -27,6 +20,12 @@ advance.addEventListener('click', function () {
 
 function advanceImage(steps) {
     current = (current + steps) % images.length;
-
     image.innerHTML = ` <img class="carousel__img" src="${images[current].url}" alt="Image 1" loading="lazy">`;
 }
+
+$(function() {
+    $(".Heart-Animation").click(function() {
+        console.log("Click event triggered");
+    $(this).toggleClass("animate");
+    });
+});

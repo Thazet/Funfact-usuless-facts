@@ -24,47 +24,24 @@
 .carousel__text {
     overflow: hidden;
     position: fixed;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    flex-direction: column;
-    opacity: 0;
     transition: opacity 0.5s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    transition: background-color 0.9s;
     margin-bottom: 10rem;
-    text-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 1);
 }
 
 .carousel__title {
     padding-top: 1rem;
-    color: var(--color-white);
-    font-weight: 300;
-    font-size: 1rem;
-}
-
-.carousel__description {
-    align-items: center;
-    padding: 2%;
-    color: var(--color-light-blue-green);
-    font-weight: 300;
-    font-size: 0;
-}
-
-.carousel__images .carousel__text {
-    width: 50%;
-    opacity: 1;
-    transition: 1s;
-    
+    color: var(--color-dark-blue);
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
 .carousel__advance {
     border-color: transparent;
     position: absolute;
-    margin-right: -1rem;
+    margin-right: 1rem;
     border-color: transparent;
     color: var(--color-white);
 }
@@ -72,16 +49,44 @@
 .carousel__change-image-button {
     background-color: var(--color-dark-blue);
     border-radius: 10rem;
-    width: 10rem;
-    height: 2rem;
-    margin-top: 25rem;
+    width: 12rem;
+    height: 2.3rem;
+    margin-top: 15rem;
     color: var(--color-white);
-    font-size: 0.9rem;
+    font-size: 1rem;
     align-items: center;
     text-align: center;
     border-color: transparent;
 
 }
+
+.Heart-Animation {
+    padding-top: 2em;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/66955/web_heart_animation.png');
+    background-repeat: no-repeat;
+    background-size: 2900%;
+    background-position: left;
+    height: 110px;
+    width: 110px;
+    margin: 5rem 0rem 40rem 49rem;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1; 
+}
+
+.animate {
+    animation: heart-burst .8s steps(28) forwards;
+}
+
+@keyframes heart-burst {
+    0% {
+        background-position: left
+    }
+    100% {
+        background-position: right
+    }
+}
+
 
 
 /* Desktop styles */
@@ -127,52 +132,29 @@
     .carousel__text {
         overflow: hidden;
         position: fixed;
-        top: 50%;
-        left: 50%;
         transform: translate(-50%, -50%);
-        flex-direction: column;
-        opacity: 0;
         transition: opacity 0.5s;
-        margin-bottom: 9px;
+        margin-bottom: 0.563rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 30px;
-        background-color: transparent;
-        transition: background-color 0.9s;
     }
     
     .carousel__title {
         padding-top: 1rem;
-        color: var(--color-white);
-        font-weight: 300;
+        color: var(--color-dark-blue);
+        font-weight: 700;
         font-size: 2rem;
     }
-    
-    .carousel__description {
-        align-items: center;
-        padding: 2%;
-        color: var(--color-light-blue-green);
-        font-weight: 300;
-        font-size: 0;
-    }
-    
-    .carousel__images .carousel__text {
-        width: 50%;
-        opacity: 1;
-        transition: 1s;
-        
-    }
-    
+
     .carousel__advance {
         position: absolute;
         bottom: 13rem;
         border-color: transparent;
-        
     }
     
     .carousel__change-image-button {
-        background-color: var( --color-purple);
+        background-color: var(--color-dark-blue);
         border-radius: 15rem;
         width: 20rem;
         height: 3rem;
@@ -182,6 +164,33 @@
         align-items: center;
         text-align: center;
         border-color: transparent;
+    }
+
+    .Heart-Animation {
+        padding-top: 2em;
+        background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/66955/web_heart_animation.png');
+        background-repeat: no-repeat;
+        background-size: 2900%;
+        background-position: left;
+        height: 100px;
+        width: 100px;
+        margin: 40rem 0rem 40rem 55rem;
+        cursor: pointer;
+        position: absolute;
+        z-index: 1; 
+    }
+
+    .animate {
+        animation: heart-burst .8s steps(28) forwards;
+    }
+
+    @keyframes heart-burst {
+        0% {
+    background-position: left
+    }
+    100% {
+    background-position: right
+    }
     }
     
 }
