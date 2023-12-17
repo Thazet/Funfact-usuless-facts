@@ -1,0 +1,114 @@
+/*background mobil */
+.carousel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel__images {
+    background-color: var(--color-yellow);
+    height: calc(100vh - 200px);
+    width: 100%;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#img {
+    display: none;
+}
+
+
+.carousel__title-home {
+    padding-top: 1rem;
+    color: var(--color-dark-blue);
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.carousel__title {
+    padding-top: 1rem;
+    color: var(--color-dark-blue);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.carousel__text {
+    text-align: center;
+    height: 20rem;
+}
+
+/*animacion corazon*/
+.Heart-Animation {
+    background-image: url('../../assets/img/web_heart_animation.png');
+    background-repeat: no-repeat;
+    background-size: 2900%;
+    background-position: left;
+    height: 110px;
+    width: 110px;
+    cursor: pointer;
+    align-self: end;
+}
+
+.animate {
+    animation: heart-burst .8s steps(28) forwards;
+}
+
+@keyframes heart-burst {
+    0% {
+        background-position: left
+    }
+
+    100% {
+        background-position: right
+    }
+}
+
+/* animacion btn*/
+.carousel__change-image-button {
+    background-color: var(--color-dark-blue);
+    border-radius: 10rem;
+    width: 12rem;
+    height: 2.3rem;
+    color: var(--color-white);
+    font-size: 1rem;
+    align-items: center;
+    text-align: center;
+    border-color: transparent;
+
+}
+
+.button-pulse {
+    animation: pulse 2s infinite 3s cubic-bezier(0.25, 0, 0, 1);
+    box-shadow: 0 0 0 0 #8a5fdc;
+}
+
+@keyframes pulse {
+    to {
+        box-shadow: 0 0 0 18px rgba(255, 255, 255, 0);
+    }
+}
+
+/* clase que oculta seccion de la home*/
+.hidden {
+    display: none;
+}
+
+@media (min-width: 1000px) {
+    .carousel__images {
+        background-image: url(../../assets/img/1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .carousel__title {
+        font-size: 1.5rem;
+    }
+
+    .carousel__title-home {
+        font-size: 2.5rem;
+    }
+}

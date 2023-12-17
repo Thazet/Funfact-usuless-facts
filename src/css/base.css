@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
-@import url("./style.css");
-@import url("./facts-section-main.css");
+/* @import url("./facts-section-main.css"); */
 @import url("./header.css");
 @import url("./footer.css");
+@import url("./facts-home.css");
 @import url("./favourite.css");
 
 :root {
-    --color-yellow: #F2E7A9;
+    --color-yellow: #f6e8a7;
     --color-white: #fff;
     --color-red: #E83C51;
     --color-dark-blue: #310D75;
@@ -21,8 +21,4 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
-html {
-    position: relative;
 }
