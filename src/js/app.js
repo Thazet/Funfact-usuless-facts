@@ -1,6 +1,7 @@
 const btnFact = document.querySelector(".carousel__change-image-button");
 const factTitle = document.querySelector(".carouser__facts");
 const titleHome = document.querySelector(".carousel__title-home");
+
 const getRamdomFacts = async () => {
     try {
         const response = await fetch("https://uselessfacts.jsph.pl/api/v2/facts/random");
@@ -17,6 +18,12 @@ btnFact.addEventListener("click", async () => {
     factTitle.textContent = data.text;
     titleHome.classList.add("hidden")
 
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    btnFavourite.addEventListener("click", function () {
+        btnFavourite.classList.toggle("animate");
+    })
 });
 
 
