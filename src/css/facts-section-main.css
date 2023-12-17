@@ -78,6 +78,21 @@
     z-index: 1;
 }
 
+.carousel__change-image-button:hover {
+    background-color: var(--color-dark-blue);
+}
+
+.button-pulse {
+    animation: pulse 2s infinite 3s cubic-bezier(0.25, 0, 0, 1);
+    box-shadow: 0 0 0 0 #8a5fdc;
+}
+
+@keyframes pulse {
+    to {
+        box-shadow: 0 0 0 18px rgba(255, 255, 255, 0);
+    }
+}
+
 .hidden {
     display: none;
 }
@@ -129,8 +144,8 @@
     }
 
     .carousel__title-home {
-        font-size: 3rem;
-        margin-left: 13rem;
+        font-size: 2.5rem;
+        margin-left: 10rem;
     }
 
     .carousel__advance {
@@ -146,7 +161,7 @@
 
     .carousel__text {
         width: 55%;
-        left: 50%;
+        left: 55%;
         top: 20rem;
 
     }
@@ -162,5 +177,6 @@
         align-items: center;
         text-align: center;
         border-color: transparent;
+        cursor: pointer;
     }
 }
