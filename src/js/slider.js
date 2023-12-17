@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var elements = document.querySelectorAll(".heart-animation");
     elements.forEach(function (element) {
         element.addEventListener("click", function () {
-            this.classList.toggle("animate");
+            element.classList.toggle("animate");
         });
     });
 });
