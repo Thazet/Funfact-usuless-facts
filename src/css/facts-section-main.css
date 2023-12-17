@@ -1,4 +1,3 @@
-
 .carousel {
     display: flex;
     align-items: center;
@@ -6,28 +5,28 @@
     overflow: hidden;
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 .carousel__images {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     position: relative;
 }
 
 .carousel__img {
     display: flex;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.85);
     height: 100%;
     object-fit: cover;
 }
 
 .carousel__text {
     overflow: hidden;
-    position: fixed;
-    top: 40%;
+    position: absolute;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: opacity 0.5s;
+    width: 30%;
     margin-bottom: 10rem;
 }
 
@@ -38,12 +37,19 @@
     font-size: 1.2rem;
 }
 
+.carousel__title-home {
+    padding-top: 1rem;
+    color: var(--color-dark-blue);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
 .carousel__advance {
     border-color: transparent;
     position: absolute;
-    margin-right: 1rem;
     border-color: transparent;
     color: var(--color-white);
+    bottom: 10rem;
 }
 
 .carousel__change-image-button {
@@ -51,7 +57,6 @@
     border-radius: 10rem;
     width: 12rem;
     height: 2.3rem;
-    margin-top: 15rem;
     color: var(--color-white);
     font-size: 1rem;
     align-items: center;
@@ -61,17 +66,35 @@
 }
 
 .Heart-Animation {
-    padding-top: 2em;
-    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/66955/web_heart_animation.png');
+    background-image: url('../../assets/img/web_heart_animation.png');
     background-repeat: no-repeat;
     background-size: 2900%;
     background-position: left;
     height: 110px;
     width: 110px;
-    margin: 5rem 0rem 40rem 49rem;
+    margin: 4rem 0rem 40rem 55rem;
     cursor: pointer;
     position: absolute;
-    z-index: 1; 
+    z-index: 1;
+}
+
+.carousel__change-image-button:hover {
+    background-color: var(--color-dark-blue);
+}
+
+.button-pulse {
+    animation: pulse 2s infinite 3s cubic-bezier(0.25, 0, 0, 1);
+    box-shadow: 0 0 0 0 #8a5fdc;
+}
+
+@keyframes pulse {
+    to {
+        box-shadow: 0 0 0 18px rgba(255, 255, 255, 0);
+    }
+}
+
+.hidden {
+    display: none;
 }
 
 .animate {
@@ -82,6 +105,7 @@
     0% {
         background-position: left
     }
+
     100% {
         background-position: right
     }
@@ -92,54 +116,26 @@
 /* Desktop styles */
 @media (min-width: 1000px) {
 
-    body {
-        width: 100%;
-        height: 100%;
-        font-family: "Poppins", sans-serif;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }
-    
-    .carousel {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-    }
-    
     .carousel__images {
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
         position: relative;
-        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.85);
     }
-    
+
+    #img {
+        width: 100%;
+        height: 46.5rem;
+    }
+
     .carousel__img {
         height: 100%;
         width: 100%;
         object-fit: cover;
     }
-    
-    .carousel__text {
-        overflow: hidden;
-        position: fixed;
-        transform: translate(-50%, -50%);
-        transition: opacity 0.5s;
-        margin-bottom: 0.563rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
+
     .carousel__title {
         padding-top: 1rem;
         color: var(--color-dark-blue);
@@ -147,12 +143,29 @@
         font-size: 2rem;
     }
 
+    .carousel__title-home {
+        font-size: 2.5rem;
+        margin-left: 10rem;
+    }
+
     .carousel__advance {
         position: absolute;
-        bottom: 18rem;
+        bottom: 10rem;
         border-color: transparent;
     }
-    
+
+    .Heart-Animation {
+        top: 2rem;
+        right: 4rem;
+    }
+
+    .carousel__text {
+        width: 55%;
+        left: 55%;
+        top: 20rem;
+
+    }
+
     .carousel__change-image-button {
         background-color: var(--color-dark-blue);
         border-radius: 15rem;
@@ -164,33 +177,6 @@
         align-items: center;
         text-align: center;
         border-color: transparent;
-    }
-
-    .Heart-Animation {
-        padding-top: 2em;
-        background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/66955/web_heart_animation.png');
-        background-repeat: no-repeat;
-        background-size: 2900%;
-        background-position: left;
-        height: 100px;
-        width: 100px;
-        margin: 40rem 0rem 40rem 55rem;
         cursor: pointer;
-        position: absolute;
-        z-index: 1; 
     }
-
-    .animate {
-        animation: heart-burst .8s steps(28) forwards;
-    }
-
-    @keyframes heart-burst {
-        0% {
-    background-position: left
-    }
-    100% {
-    background-position: right
-    }
-    }
-    
 }

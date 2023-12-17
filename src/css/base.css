@@ -3,6 +3,7 @@
 @import url("./facts-section-main.css");
 @import url("./header.css");
 @import url("./footer.css");
+@import url("./favourite.css");
 
 :root {
     --color-yellow: #F2E7A9;
@@ -20,4 +21,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+html {
+    position: relative;
 }

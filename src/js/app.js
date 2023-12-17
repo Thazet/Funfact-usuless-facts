@@ -1,19 +1,22 @@
 const btnFact = document.querySelector(".carousel__change-image-button");
-const factsH3 = document.querySelector(".carousel__title");
-const getRamdomFacts = async() => {
+const factTitle = document.querySelector(".carouser__facts");
+const titleHome = document.querySelector(".carousel__title-home");
+const getRamdomFacts = async () => {
     try {
         const response = await fetch("https://uselessfacts.jsph.pl/api/v2/facts/random");
         const data = response.json();
         return data
     } catch (error) {
         console.log("Error");
-        
-    }  
+
+    }
 
 }
-btnFact.addEventListener("click", async() =>{
+btnFact.addEventListener("click", async () => {
     const data = await getRamdomFacts();
-    factsH3.textContent = data.text;
+    factTitle.textContent = data.text;
+    titleHome.classList.add("hidden")
+
 });
 
 

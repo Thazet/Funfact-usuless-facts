@@ -8,63 +8,121 @@
   <link rel="stylesheet" href="./src/css/base.css">
   <title>Useless Facts</title>
 </head>
+
 <body>
   <header>
     <nav class="navbar-container">
       <div class="navbar-container__left">
-        <img src="./assets/img/logoUselessfacts.svg" alt="logo">
+        <a href="/"> <img src="./assets/img/logoUselessfacts.svg" alt="logo"></a>
       </div>
       <div class="navbar-container__right">
-        <a href="index.html" class="navbar-container__right--btn-favorites">Favorites</a>
+        <a id="nav-favourites" class="navbar-container__right--btn-favorites">Favorites</a>
       </div>
     </nav>
   </header>
-  
+
   <main>
     <div class="carousel">
       <div class="carousel__images">
         <div id="img">
           <img class="carousel__img" src="./assets/img/1.png" alt="Image 1" loading="lazy">
         </div>
-        <div class="Heart-Animation"></div>
+        <div class="Heart-Animation hidden"></div>
         <div id="texto" class="carousel__text">
-          <p class="carousel__title">Welcome to Useless Facts</p>
+          <p class="carousel__title-home">Welcome to Useless Facts</p>
+          <p class="carousel__title carouser__facts"></p>
         </div>
       </div>
       <div class="carousel__advance" id="advance">
-        <button class="carousel__change-image-button">Generate Fact</button>
+        <button class="carousel__change-image-button button-pulse">Generate Fact</button>
       </div>
     </div>
+    <section class="container-favorite hidden">
+      <div class="content-favorite">
+        <div class="container-favorite__title">
+          <img src="./assets/img/IsotipoUselessfacts.svg" alt="isotipo del logo">
+          <h4>Your favourites</h4>
+        </div>
+        <div class="container-favorite__slider">
+          <div id="menu-slider">
+            <div id="nav-slider">
+              <div id="nav-slider__prev">
+                <img src="./assets/img/previus-icon.svg" alt="icons previus">
+              </div>
+              <div id="nav-slider__next">
+                <img src="./assets/img/next-icon.svg" alt="icons next">
+              </div>
+            </div>
+            <ul id="slider-container-cards">
+              <li id="box1" class="slider__card">
+                <div class="content-slider__card">
+                  <div class="heart-animation"></div>
+                  <p>The name Wendy was made up for the book "Peter Pan."</p>
+                </div>
+              </li>
+              <li id="box2" class="slider__card">
+                Barbie's full name is Barbara Millicent Roberts
+              </li>
+              <li id="box4" class="slider__card">
+                hola
+              </li>
+              <li id="box5" class="slider__card">
+                adios
+              </li>
+            </ul>
+          </div>
+          <aside class="carousel__navigation">
+            <ol class="carousel__navigation-list">
+              <li class="carousel__navigation-item">
+                <a href="#box1" class="carousel__navigation-button">Go to slide 1</a>
+              </li>
+              <li class="carousel__navigation-item">
+                <a href="#box2" class="carousel__navigation-button">Go to slide 2</a>
+              </li>
+              <li class="carousel__navigation-item">
+                <a href="#box3" class="carousel__navigation-button">Go to slide 3</a>
+              </li>
+              <li class="carousel__navigation-item">
+                <a href="#box4" class="carousel__navigation-button">Go to slide 4</a>
+              </li>
+              <li class="carousel__navigation-item">
+                <a href="#box5" class="carousel__navigation-button">Go to slide 4</a>
+              </li>
+            </ol>
+          </aside>
+        </div>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="container-footer">
       <div class="footer__icons-section">
-      <a class="footer__icons-section--instragam" href="www.instragam.com">
-        <img src="./assets/img/icon-instagram.svg" alt="logo instragram">
-      </a>
-      <a class="footer__icons-section--facebook" href="wwww.facebook.com">
-        <img src="./assets/img/icon-facebook.svg" alt="logo facebook">
-      </a>
-      <a class="footer__icons-section--tiktok" href="www.tiktok.com">
-        <img src="./assets/img/icon-tiktok.svg" alt="logo tiktok">
-      </a>
-      <a class="footer__icons-section--youtube" href="wwww.youtube.com">
-        <img src="./assets/img/icon-youtube.svg" alt="logo youtube">
-      </a>
-      <a class="footer__icons-section--twitter" href="www.twitter.com">
-        <img src="./assets/img/icon-twitter.svg" alt="logo twitter">
-      </a>
+        <a class="footer__icons-section--instragam" href="www.instragam.com">
+          <img src="./assets/img/icon-instagram.svg" alt="logo instragram">
+        </a>
+        <a class="footer__icons-section--facebook" href="wwww.facebook.com">
+          <img src="./assets/img/icon-facebook.svg" alt="logo facebook">
+        </a>
+        <a class="footer__icons-section--tiktok" href="www.tiktok.com">
+          <img src="./assets/img/icon-tiktok.svg" alt="logo tiktok">
+        </a>
+        <a class="footer__icons-section--youtube" href="wwww.youtube.com">
+          <img src="./assets/img/icon-youtube.svg" alt="logo youtube">
+        </a>
+        <a class="footer__icons-section--twitter" href="www.twitter.com">
+          <img src="./assets/img/icon-twitter.svg" alt="logo twitter">
+        </a>
+      </div>
+      <div class="footer__contact-section">
+        <p class="footer__contact-section--email">email@useless.com</p>
+        <p class="footer__contact-section--phone">+34 123456789</p>
+      </div>
     </div>
-    <div class="footer__contact-section">
-      <p class="footer__contact-section--email">email@useless.com</p>
-      <p class="footer__contact-section--phone">+34 123456789</p>      
-    </div></div>
-    
+
   </footer>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="/src/js/facts-section-main.js"></script>
-    <script src="/src/js/app.js" type="module"></script>
+  <script src="./src/js/facts-section-favourite.js"></script>
+  <script src="/src/js/facts-section-main.js"></script>
+  <script src="/src/js/app.js" type="module"></script>
 </body>
 
 </html>
