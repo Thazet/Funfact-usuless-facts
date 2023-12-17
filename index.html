@@ -13,10 +13,10 @@
   <header>
     <nav class="navbar-container">
       <div class="navbar-container__left">
-        <img src="./assets/img/logoUselessfacts.svg" alt="logo">
+        <a href="/"> <img src="./assets/img/logoUselessfacts.svg" alt="logo"></a>
       </div>
       <div class="navbar-container__right">
-        <a href="index.html" class="navbar-container__right--btn-favorites">Favorites</a>
+        <a id="nav-favourites" class="navbar-container__right--btn-favorites">Favorites</a>
       </div>
     </nav>
   </header>
@@ -27,18 +27,17 @@
         <div id="img">
           <img class="carousel__img" src="./assets/img/1.png" alt="Image 1" loading="lazy">
         </div>
-        <div class="Heart-Animation"></div>
+        <div class="Heart-Animation hidden"></div>
         <div id="texto" class="carousel__text">
-          <p class="carousel__title">Welcome to Useless Facts</p>
+          <p class="carousel__title-home">Welcome to Useless Facts</p>
+          <p class="carousel__title carouser__facts"></p>
         </div>
       </div>
       <div class="carousel__advance" id="advance">
         <button class="carousel__change-image-button">Generate Fact</button>
       </div>
     </div>
-    </section>
-
-    <section class="container-favorite">
+    <!-- <section class="container-favorite hidden">
       <div class="content-favorite">
         <div class="container-favorite__title">
           <img src="./assets/img/IsotipoUselessfacts.svg" alt="isotipo del logo">
@@ -92,7 +91,7 @@
             </ol>
           </aside>
         </div>
-    </section>
+    </section> -->
   </main>
 
   <footer class="footer">
@@ -121,7 +120,9 @@
     </div>
 
   </footer>
-  <script src="./src/js/script.js"> type = "text/javascript"</script>
+  <script src="./src/js/facts-section-favourite.js"></script>
+  <script src="/src/js/facts-section-main.js"></script>
+  <script src="/src/js/app.js" type="module"></script>
 </body>
 
 </html>
