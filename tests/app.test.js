@@ -1,6 +1,7 @@
-import { expect, it } from 'vitest'
+import { expect, it, describe, beforeAll } from 'vitest'
 import {JSOM} from 'jsdom'
-import "./js.app.test.js";
+
+import "./app.test.js";
 
 describe('pageTest', () => {
     let dom; 
