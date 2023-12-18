@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-
+export {addFavoriteFact, getRamdomFacts}
 
 
 
