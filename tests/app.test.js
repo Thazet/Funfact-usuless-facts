@@ -1,6 +1,11 @@
-import { expect, it, describe, beforeAll } from 'vitest'
+import { expect, it, describe, beforeAll, vi } from 'vitest'
 import { JSDOM } from 'jsdom'
-import { addFavoriteFact, getRamdomFacts,  } from '../src/js/app.js';
+import { addFavoriteFact, getRamdomFacts } from '../src/js/app.js';
+
+global.fetch = vi.fn()
+function createFetchResponse(data) {
+    return { json: () => new Promise((resolve) => resolve(data)) }
+}
 
 describe('pageTest', () => {
     let dom;
@@ -11,42 +16,41 @@ describe('pageTest', () => {
             resources: "usable",
             runScripts: "dangerously",
         });
-    
+
         window = dom.window
         document = dom.window.document
     })
 
-    it("should generate new fact"), () => {
-        const btnFact = document.querySelector(".carousel__change-image-button");
-        const testArr = ["The average person falls asleep in seven minutes.", "Reindeer like to eat bananas."];
-        expect(btnFact(testArr)).toEqual(["The average person falls asleep in seven minutes."]);
-    }
+    it("should generate new fact", async () => {
 
-    it("should exist getRamdomFacts function"), () => {
-        expect(getRamdomFacts).toBeDefined();
-    }
+        const mockRandomFactResponse = { text: 'The average person falls asleep in seven minutes.' }
+        fetch.mockResolvedValue(createFetchResponse(mockRandomFactResponse))
 
-    it("should exist addFavoriteFacts function"), () => {
+        const randomFact = await getRamdomFacts()
+        expect(randomFact).toBe(mockRandomFactResponse)
+
+    })
+
+    it("should exist addFavouriteFact function", () => {
         expect(addFavoriteFact).toBeDefined();
-    }
+    })
 
-    it("should link to favorites section"), () => {
-        const navLinkFavourite = document.querySelector("#nav-favourites")
-        const homeCarousel = document.querySelector(".carousel")
-        const sectionFavourite = document.querySelector(".container-favorite")
+    it("should exist getRamdomFacts function", () => {
+        expect(getRamdomFacts).toBeDefined();
+    })
 
-        navLinkFavourite.click();
+    it("should link to favorites section", async () => {
+        const sectionFavourite = document.querySelector('.container-favorite')
+        expect(sectionFavourite.classList).toContain('hidden')
+    })
 
-        expect(homeCarousel.classList.contains('hidden')).toMatch(true);
-        expect(sectionFavourite.classList.contains('hidden')).toMatch(false);   
-    }
+    it("should add fact to favorites section", () => {
 
-    it("should add fact to favorites section"), () => {
-        const btnFavourite = document.querySelector(".Heart-Animation")
-        const currentFact = ["The average person falls asleep in seven minutes.", "Reindeer like to eat bananas."];
-        // expect(btnFavourite.click)
-    }
-
+        expect(global.localStorage.getItem("arrayFavourite")).toBe(null)
+        addFavoriteFact({ text: 'The average person falls asleep in seven minutes.' })
+        expect(global.localStorage.getItem("arrayFavourite")).not.toBe(null)
+        expect(JSON.parse(global.localStorage.getItem("arrayFavourite"))).toStrictEqual([{ "text": 'The average person falls asleep in seven minutes.' }])
+    })
 
     it("Instagram button should link to instagram page", () => {
         let linkInstagram = document.querySelector(".footer__icons-section--instagram")

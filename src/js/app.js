@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-export {addFavoriteFact, getRamdomFacts}
+export { addFavoriteFact, getRamdomFacts }
 
 
 
