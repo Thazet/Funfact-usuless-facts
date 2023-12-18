@@ -25,12 +25,15 @@
     display: none;
 }
 
+.slider__card p {
+    font-size: .8rem;
+}
 
 .carousel__title-home {
-    padding-top: 5rem;
+    padding-top: 4rem;
     color: var(--color-dark-blue);
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-top: 4rem;
 }
 
@@ -131,11 +134,11 @@
     }
 
     .carousel__title {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .carousel__title-home {
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin-top: 0;
     }
 }

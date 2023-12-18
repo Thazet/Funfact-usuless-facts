@@ -1,6 +1,6 @@
 .container-favorite {
     background: var(--color-light-blue-green);
-    padding: 6rem 0;
+    padding: 2rem 0;
 }
 
 .container-favorite__title {
@@ -113,7 +113,7 @@
 
 #nav-slider__prev,
 #nav-slider__next {
-    margin-top: 11rem;
+    margin-top: 8rem;
     color: #aaaaaa;
 }
 
@@ -231,7 +231,7 @@
 
     .container-favorite__title {
         width: 72%;
-        margin: 2rem auto 0;
+        margin: 3.5rem auto 0;
     }
 
     .carousel__navigation {
@@ -243,10 +243,14 @@
     }
 
     .container-favorite__title h4 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .container-no-favourite p {
         font-size: 1.5rem;
+    }
+
+    .slider__card {
+        margin: 4rem 2rem 0 2rem;
     }
 }
