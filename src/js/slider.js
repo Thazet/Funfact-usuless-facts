@@ -48,12 +48,7 @@ export const createSlider = (arrayFavourite) => {
         // Agregar la animación del corazón
         const heartAnimation = document.createElement("div");
         heartAnimation.classList.add("heart-animation", "animate");
-        /* en caso se clicka el corazon en la pestaña favoritos eliminara su padre contenedor*/
-        // heartAnimation.addEventListener("click", (event) => {
-        //     const heartClicked = event.target
-        //     console.log({ arrayFavourite })
-        //     heartClicked.parentElement.parentElement.remove()
-        // })
+
 
         innerContent.appendChild(heartAnimation);
 
