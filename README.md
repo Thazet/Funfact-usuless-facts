@@ -16,7 +16,8 @@ El proyecto consta de una interfaz web que muestra un hecho curioso aleatorio al
 
 ## 🚀 Demo en Vivo
 
-![Alt text](assets/video/Useless%20Facts.mp4)
+
+https://github.com/Thazet/Funfact-usuless-facts/assets/122264533/26f93724-3e81-4337-af33-7ee4dc3c1a88
 
 ## 🕹️ Cómo Ejecutar el Proyecto Localmente
 
@@ -99,7 +100,7 @@ The project consists of a web interface that displays a random fun fact on page 
 
 ## 🚀 Live Demo.
 
-![Alt text](assets/video/Useless%20Facts.mp4)
+https://github.com/Thazet/Funfact-usuless-facts/assets/122264533/26f93724-3e81-4337-af33-7ee4dc3c1a88
 
 ## 🕹️ How to Run the Project Locally.
 
