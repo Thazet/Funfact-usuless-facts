@@ -24,17 +24,21 @@ Para comenzar a disfrutar de los fascinantes hechos curiosos de Useless Facts, s
 
 1.Clona el Repositorio:
 Copy code -> git clone https://github.com/Thazet/Funfact-usuless-facts.git
+
 2. Accede al Directorio del Proyecto:
  -> el directorio que hayas asignado
+
 3. Instala las Dependencias:
 Utiliza npm para instalar las dependencias necesarias.
 Copy code -> npm install
+
 4. Abre la Aplicación:
 Abre el archivo index.html en tu navegador web favorito. Puedes hacerlo directamente desde la interfaz de tu sistema operativo o mediante un servidor local.
 Copy code -> open index.html
 O bien, si prefieres usar un servidor local:
 Copy code -> npm start
 Esto abrirá automáticamente la aplicación en tu navegador predeterminado.
+
 5. ¡Explora Hechos Curiosos!
 Ahora estás listo para explorar hechos curiosos aleatorios o agregar tus favoritos. ¡Disfruta de la experiencia de Useless Facts!
 
@@ -103,17 +107,21 @@ To start enjoying the fascinating Useless Facts fun facts, follow these simple s
 
 1.Clone the Repository:
 Copy code -> git clone https://github.com/Thazet/Funfact-usuless-facts.git
+
 2. Access the Project Directory:
  -> the directory you have assigned
+
 3. Install the Dependencies:
 Use npm to install the necessary dependencies.
 Copy code -> npm install
+
 4. Open the Application:
 Open the index.html file in your favorite web browser. You can do it directly from your operating system interface or through a local server.
 Copy code -> open index.html
 Or, if you prefer to use a local server:
 Copy code -> npm start
 This will automatically open the application in your default browser.
+
 5. Explore Fun Facts!
 Now you are ready to explore random fun facts or add your favorites - enjoy the Useless Facts experience!
 
