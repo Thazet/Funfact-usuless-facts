@@ -1,6 +1,6 @@
 import { expect, it, describe, beforeAll } from 'vitest'
 import { JSDOM } from 'jsdom'
-import { addFavoriteFact, getRamdomFacts } from '../src/js/app.js';
+import { addFavoriteFact, getRamdomFacts,  } from '../src/js/app.js';
 
 describe('pageTest', () => {
     let dom;
@@ -22,21 +22,31 @@ describe('pageTest', () => {
         expect(btnFact(testArr)).toEqual(["The average person falls asleep in seven minutes."]);
     }
 
-    it("should exist addFavouriteFact function"), () => {
-        expect(addFavoriteFact).toBeDefined();
-    }
-
     it("should exist getRamdomFacts function"), () => {
         expect(getRamdomFacts).toBeDefined();
     }
 
-    it("should link to favorites section"), () => {
+    it("should exist addFavoriteFacts function"), () => {
+        expect(addFavoriteFact).toBeDefined();
+    }
 
+    it("should link to favorites section"), () => {
+        const navLinkFavourite = document.querySelector("#nav-favourites")
+        const homeCarousel = document.querySelector(".carousel")
+        const sectionFavourite = document.querySelector(".container-favorite")
+
+        navLinkFavourite.click();
+
+        expect(homeCarousel.classList.contains('hidden')).toMatch(true);
+        expect(sectionFavourite.classList.contains('hidden')).toMatch(false);   
     }
 
     it("should add fact to favorites section"), () => {
-
+        const btnFavourite = document.querySelector(".Heart-Animation")
+        const currentFact = ["The average person falls asleep in seven minutes.", "Reindeer like to eat bananas."];
+        // expect(btnFavourite.click)
     }
+
 
     it("Instagram button should link to instagram page", () => {
         let linkInstagram = document.querySelector(".footer__icons-section--instagram")
