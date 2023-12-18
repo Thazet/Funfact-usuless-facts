@@ -31,10 +31,10 @@ export const createSlider = (arrayFavourite) => {
     navSlider.appendChild(navPrev);
     navSlider.appendChild(navNext);
 
+
     // Crear el elemento ul con id="slider-container-cards"
     const sliderContainer = document.createElement("ul");
     sliderContainer.id = "slider-container-cards";
-
 
     for (let i = 0; i < arrayFavourite.length; i++) {
         const listItem = document.createElement("li");

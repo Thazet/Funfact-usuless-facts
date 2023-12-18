@@ -1,6 +1,7 @@
 .container-favorite {
     background: var(--color-light-blue-green);
-    margin: 6rem 0;
+    padding: 6rem 0;
+
 }
 
 .container-favorite__title {
@@ -12,7 +13,11 @@
 .container-favorite__title h4 {
     color: var(--color-dark-blue);
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.2rem;
+}
+
+.container-favorite {
+    height: calc(100vh - 200px);
 }
 
 /*heart animation*/
@@ -150,7 +155,25 @@
     outline: 0;
 }
 
+/**css pagina cuando no hay favorito */
+.container-no-favourite {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 6rem 0rem;
+}
 
+.container-no-favourite p {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: var(--color-dark-blue);
+
+}
+
+.container-no-favourite img {
+    width: 30%;
+}
 
 @media (max-width: 1000px) {
     #menu-slider {
@@ -161,8 +184,8 @@
     }
 
     .slider__card {
-        width: 16rem;
-        height: 17rem;
+        width: 15rem;
+        height: 20rem;
         border: 1px solid var(--color-white);
         display: inline-block;
         text-align: center;
@@ -171,6 +194,10 @@
         margin: 6rem 1rem 0 1rem;
         padding: 1rem;
         white-space: normal;
+    }
+
+    .slider__card p {
+        font-size: .9rem;
     }
 
     #nav-slider__prev,
@@ -182,6 +209,14 @@
 @media (min-width: 1000px) {
     .container-favorite {
         background: var(--color-white);
+        padding: 0;
+    }
+
+    .footer-contact {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
     }
 
     .slider__card {
@@ -196,10 +231,18 @@
 
     .container-favorite__title {
         width: 72%;
-        margin: 1rem auto;
+        margin: 4% auto;
     }
 
     .carousel__navigation {
         margin-top: 2rem;
+    }
+
+    .container-no-favourite img {
+        width: 10%;
+    }
+
+    .container-favorite__title h4 {
+        font-size: 2.2rem;
     }
 }

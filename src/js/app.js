@@ -9,6 +9,7 @@ const homeCarousel = document.querySelector(".carousel")
 const sectionFavourite = document.querySelector(".container-favorite")
 const containerFavoriteSlider = document.querySelector(".container-favorite__slider")
 const btnFavourite = document.querySelector(".Heart-Animation")
+const footerContact = document.querySelector(".footer")
 let currentFact
 let arrayFavourite = []
 
@@ -63,9 +64,15 @@ document.addEventListener("DOMContentLoaded", function () {
     navLinkFavourite.addEventListener("click", () => {
         homeCarousel.classList.add("hidden")
         sectionFavourite.classList.remove("hidden")
+        /*quitando la clase de la section cuando este en css*/
+        footerContact.classList.add("footer-contact")
 
         if (arrayFavourite.length === 0) {
-            containerFavoriteSlider.innerHTML = `<p>No tienes favoritos aún</p>`
+            containerFavoriteSlider.innerHTML = `<div class="container-no-favourite">
+            <img src="./assets/img/icon-broken-heart.png" alt="corazon roto">
+            <p>No tienes favoritos aún :(</p>
+           
+            </div>`
         }
         else {
             const menuSlider = createSlider(arrayFavourite)

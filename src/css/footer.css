@@ -7,6 +7,12 @@
     width: 100%;
 }
 
+.footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
 
 
 .footer__icons-section {
