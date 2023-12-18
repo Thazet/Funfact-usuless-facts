@@ -60,10 +60,14 @@ document.addEventListener("DOMContentLoaded", function () {
         titleHome.classList.add("hidden")
 
     });
+
     /* recuperamos el link para ir a la section favoritos*/
     navLinkFavourite.addEventListener("click", () => {
         homeCarousel.classList.add("hidden")
         sectionFavourite.classList.remove("hidden")
+        /* se desactiva el click del enlace para que no mueste mas favoritos*/
+        navLinkFavourite.style.pointerEvents = "none";
+        navLinkFavourite.style.cursor = "none"
         /*quitando la clase de la section cuando este en css*/
         footerContact.classList.add("footer-contact")
 
@@ -71,16 +75,29 @@ document.addEventListener("DOMContentLoaded", function () {
             containerFavoriteSlider.innerHTML = `<div class="container-no-favourite">
             <img src="./assets/img/icon-broken-heart.png" alt="corazon roto">
             <p>No tienes favoritos aún :(</p>
-           
             </div>`
         }
         else {
             const menuSlider = createSlider(arrayFavourite)
             containerFavoriteSlider.appendChild(menuSlider)
+            const favoriteButtons = document.querySelectorAll(".animate")
+
+            favoriteButtons.forEach((favourite) => {
+                favourite.addEventListener("click", (event) => {
+                    const heartClicked = event.target
+                    heartClicked.parentElement.parentElement.remove()
+                    const factTitle = heartClicked.parentElement.querySelector("p")
+                    const findIndexFact = arrayFavourite.findIndex(el => el.text === factTitle.textContent);
+                    arrayFavourite.splice(findIndexFact, 1)
+                    if (arrayFavourite.length === 0) {
+                        const clicEvent = new Event("click");
+                        navLinkFavourite.dispatchEvent(clicEvent)
+                    }
+                })
+            })
             document.getElementById('nav-slider__prev').addEventListener('click', function () {
                 let cardsContainer = document.getElementById('slider-container-cards');
                 let scrollAmount = -500;
-
                 cardsContainer.scrollTo({
                     left: cardsContainer.scrollLeft + scrollAmount,
                     behavior: 'smooth'
@@ -99,6 +116,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
     })
+
+
+
 
 
 });
