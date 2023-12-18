@@ -10,18 +10,9 @@ let backgroundColors = ["#87d0b7", "#00cac5", "#009ca8", "#0088af", "#f6e8a7"]
 
 let advance = document.getElementById('advance');
 let text = document.getElementById('texto');
-let btnFavourite = document.querySelector(".Heart-Animation");
+
 let current = 0;
 
-
-advance.addEventListener('click', function () {
-    // advanceImage(1);
-    isMobile() ? backgroundChangeMobile() : advanceImage()
-    //remueve la animacion del corazon rojo del siguiente fact
-    btnFavourite.classList.remove("animate");
-    //el corazon aparece al cuando le da click
-    btnFavourite.classList.remove("hidden")
-});
 /*funcion que cambia los colores en mobile*/
 function backgroundChangeMobile() {
     const currentColor = backgroundColors[currentIndex];
@@ -41,4 +32,4 @@ function advanceImage() {
     backgroundChange.style.backgroundImage = `url('${images[currentIndex]}')`;
 }
 
-
+export { backgroundChangeMobile, isMobile, advanceImage }
