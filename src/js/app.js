@@ -11,7 +11,8 @@ const containerFavoriteSlider = document.querySelector(".container-favorite__sli
 const btnFavourite = document.querySelector(".Heart-Animation")
 const footerContact = document.querySelector(".footer")
 let currentFact
-let arrayFavourite = []
+let arrayFavourite = JSON.parse(localStorage.getItem("arrayFavourite")) || [];
+
 
 const getRamdomFacts = async () => {
     try {
@@ -24,7 +25,7 @@ const getRamdomFacts = async () => {
     }
 
 }
-/* function para que no ingresen dos favorites del mismo array */
+/* function para agregar o eliminar favoritos que no ingresen dos favorites del mismo array */
 const addFavoriteFact = (currentFact) => {
     const findIndexFact = arrayFavourite.findIndex(el => el.id === currentFact.id);
 
@@ -33,11 +34,10 @@ const addFavoriteFact = (currentFact) => {
     } else {
         arrayFavourite.splice(findIndexFact, 1)
     }
+    localStorage.setItem("arrayFavourite", JSON.stringify(arrayFavourite));
 }
 
-
-/* animacion del btm corazon*/
-
+/* animacion del boton corazon*/
 document.addEventListener("DOMContentLoaded", function () {
     btnFavourite.addEventListener("click", function () {
         addFavoriteFact(currentFact)
@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     navLinkFavourite.addEventListener("click", () => {
         homeCarousel.classList.add("hidden")
         sectionFavourite.classList.remove("hidden")
+        localStorage.setItem("arrayFavourite", JSON.stringify(arrayFavourite));
         /* se desactiva el click del enlace para que no mueste mas favoritos*/
         navLinkFavourite.style.pointerEvents = "none";
         navLinkFavourite.style.cursor = "none"
@@ -89,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     const factTitle = heartClicked.parentElement.querySelector("p")
                     const findIndexFact = arrayFavourite.findIndex(el => el.text === factTitle.textContent);
                     arrayFavourite.splice(findIndexFact, 1)
+                    localStorage.setItem("arrayFavourite", JSON.stringify(arrayFavourite));
                     if (arrayFavourite.length === 0) {
                         const clicEvent = new Event("click");
                         navLinkFavourite.dispatchEvent(clicEvent)

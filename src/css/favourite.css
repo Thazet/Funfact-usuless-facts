@@ -1,7 +1,6 @@
 .container-favorite {
     background: var(--color-light-blue-green);
     padding: 6rem 0;
-
 }
 
 .container-favorite__title {
@@ -207,6 +206,7 @@
 }
 
 @media (min-width: 1000px) {
+
     .container-favorite {
         background: var(--color-white);
         padding: 0;
@@ -231,7 +231,7 @@
 
     .container-favorite__title {
         width: 72%;
-        margin: 4% auto;
+        margin: 2rem auto 0;
     }
 
     .carousel__navigation {
@@ -239,7 +239,7 @@
     }
 
     .container-no-favourite img {
-        width: 10%;
+        width: 5%;
     }
 
     .container-favorite__title h4 {
