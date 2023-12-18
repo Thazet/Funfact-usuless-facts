@@ -16,6 +16,8 @@ El proyecto consta de una interfaz web que muestra un hecho curioso aleatorio al
 
 ## 🚀 Demo en Vivo
 
+![Alt text](assets/video/Useless%20Facts.mp4)
+
 ## 🕹️ Cómo Ejecutar el Proyecto Localmente
 
 Para comenzar a disfrutar de los fascinantes hechos curiosos de Useless Facts, sigue estos sencillos pasos:
@@ -92,6 +94,8 @@ The project consists of a web interface that displays a random fun fact on page 
 -Responsive interface for mobile devices and desktop.
 
 ## 🚀 Live Demo.
+
+![Alt text](assets/video/Useless%20Facts.mp4)
 
 ## 🕹️ How to Run the Project Locally.
 
