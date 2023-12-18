@@ -1,4 +1,4 @@
-# Fun Facts Usuless Facts 
+# Fun Facts Useless Facts 
 
 Este proyecto consiste en una Single Page Application (SPA) que utiliza JavaScript para llamar a una API externa y mostrar hechos curiosos de manera aleatoria.
 

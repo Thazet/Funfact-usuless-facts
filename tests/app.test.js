@@ -1,6 +1,25 @@
 import { expect, it } from 'vitest'
-describe('APP', () => {
-    it("", () => {
-        expect(2 * 2).toEqual(4)
-    })
+import {JSOM} from 'jsdom'
+import "./js.app.test.js";
+
+describe('pageTest', () => {
+    let dom; 
+    beforeAll(async () =>{
+        dom = await JSDOM.fromFile("./index.html", {
+        resources: "usable",
+        runScripts: "dangerously",
+    });
+
+})
+it("should generate new fact"), async () => {
+    document = dom.window.document;
+    const btnFact = document.querySelector (".carousel__change-image-button")
+
+    const testArr = [ "The average person falls asleep in seven minutes.", "Reindeer like to eat bananas."];
+        
+
+expect (btnFact(testArr)).toEqual ([ "The average person falls asleep in seven minutes."]);
+}
+
+
 })
