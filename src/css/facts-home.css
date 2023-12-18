@@ -23,7 +23,7 @@
 
 
 .carousel__title-home {
-    padding-top: 1rem;
+    padding-top: 5rem;
     color: var(--color-dark-blue);
     font-weight: 700;
     font-size: 2.5rem;
@@ -34,6 +34,8 @@
     color: var(--color-dark-blue);
     font-weight: 700;
     font-size: 1.2rem;
+    max-width: 43rem;
+
 }
 
 .carousel__text {
