@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: calc(100vh - 200px);
 }
 
 .carousel__images {
@@ -11,10 +12,13 @@
     height: calc(100vh - 200px);
     width: 100%;
     padding: 2rem 3rem;
+    height: 100%;
+}
+
+.carousel__images__title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 #img {
@@ -26,21 +30,24 @@
     padding-top: 5rem;
     color: var(--color-dark-blue);
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-top: 8rem;
 }
 
 .carousel__title {
-    padding-top: 1rem;
     color: var(--color-dark-blue);
     font-weight: 700;
-    font-size: 1.2rem;
-    max-width: 43rem;
-
+    font-size: 1rem;
 }
 
 .carousel__text {
     text-align: center;
-    height: 20rem;
+    margin-bottom: 5rem;
+}
+
+/*css del display que oculta una parte del home*/
+.carousel__fake {
+    display: none;
 }
 
 /*animacion corazon*/
@@ -83,6 +90,10 @@
 
 }
 
+.carousel__advance {
+    margin-bottom: 2rem;
+}
+
 .button-pulse {
     animation: pulse 2s infinite 3s cubic-bezier(0.25, 0, 0, 1);
     box-shadow: 0 0 0 0 #8a5fdc;
@@ -100,10 +111,23 @@
 }
 
 @media (min-width: 1000px) {
+
+    /*css de la pagina home*/
+    .carousel__images__title {
+        width: 50%;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
     .carousel__images {
         background-image: url(../../assets/img/1.png);
         background-repeat: no-repeat;
         background-size: cover;
+        display: flex;
+    }
+
+    .carousel__title-home {
+        font-size: 3rem;
     }
 
     .carousel__title {
@@ -111,6 +135,7 @@
     }
 
     .carousel__title-home {
-        font-size: 2.5rem;
+        font-size: 3rem;
+        margin-top: 0;
     }
 }
