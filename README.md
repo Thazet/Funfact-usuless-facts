@@ -1,12 +1,12 @@
-# Useless Facts 
+# 📈 Useless Facts 
 
 Este proyecto consiste en una Single Page Application (SPA) que utiliza JavaScript para llamar a una API externa y mostrar hechos curiosos de manera aleatoria.
 
-## Descripción del proyecto
+## 😎 Descripción del proyecto
 
 El proyecto consta de una interfaz web que muestra un hecho curioso aleatorio al cargar la página y permite al usuario obtener nuevos hechos/Datos curiosos, con solo hacer clic en un botón. También se proporcionará la funcionalidad para guardar los hechos curiosos favoritos en un espacio específico de la interfaz.
 
-## Funcionalidad
+## ✅ Funcionalidad
 
 # Carga de un hecho curioso aleatorio al abrir la página.
 # Botón para obtener nuevos hechos curiosos.
@@ -14,9 +14,9 @@ El proyecto consta de una interfaz web que muestra un hecho curioso aleatorio al
 # Sección dedicada a los hechos curiosos favoritos.
 # Interfaz responsive para dispositivos móviles y escritorio
 
-## Demo en Vivo
+## 🚀 Demo en Vivo
 
-## Cómo Ejecutar el Proyecto Localmente
+## 🕹️ Cómo Ejecutar el Proyecto Localmente
 
 Para comenzar a disfrutar de los fascinantes hechos curiosos de Useless Facts, sigue estos sencillos pasos:
 
@@ -64,7 +64,8 @@ Ahora estás listo para explorar hechos curiosos aleatorios o agregar tus favori
 
 Este proyecto fue desarrollado como parte de un equipo diverso con roles específicos para lograr una ejecución efectiva y exitosa. ¡Gracias por explorar nuestros hechos curiosos inútiles! 🌟
 
-Gabriela Poves, Fullstack developer 
+Gabriela Poves, Fullstack developer [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com)
+
 
 Carolina Chagas, Fullstack developer [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tcarolina)
 
