@@ -31,10 +31,10 @@ export const createSlider = (arrayFavourite) => {
     navSlider.appendChild(navPrev);
     navSlider.appendChild(navNext);
 
+
     // Crear el elemento ul con id="slider-container-cards"
     const sliderContainer = document.createElement("ul");
     sliderContainer.id = "slider-container-cards";
-
 
     for (let i = 0; i < arrayFavourite.length; i++) {
         const listItem = document.createElement("li");
@@ -48,11 +48,7 @@ export const createSlider = (arrayFavourite) => {
         // Agregar la animación del corazón
         const heartAnimation = document.createElement("div");
         heartAnimation.classList.add("heart-animation", "animate");
-        /* en caso se clicka el corazon en la pestaña favoritos eliminara su padre contenedor*/
-        heartAnimation.addEventListener("click", (event) => {
-            const heartClicked = event.target
-            heartClicked.parentElement.parentElement.remove()
-        })
+
 
         innerContent.appendChild(heartAnimation);
 
